@@ -9,6 +9,18 @@
 
 ---
 
+## Visual Overview
+
+| Dashboard / Terminal | Strategy Studio |
+| :---: | :---: |
+| ![Terminal Dashboard](doc/screenshots/01-terminal-dashboard.png) | ![Strategy Studio](doc/screenshots/02-strategy-studio.png) |
+| **AI Copilot** | **Risk Visualization** |
+| ![AI Copilot](doc/screenshots/03-ai-copilot.png) | ![Payoff & Greeks](doc/screenshots/04-payoff-greeks.png) |
+| **Risk Manager** | |
+| ![Quant Risk Manager](doc/screenshots/05-quant-risk-manager.png) | |
+
+---
+
 ## The AI Options Engineer
 Unlike basic chatbots, the AI in **24 Options** is a senior quantitative engineer embedded in your terminal. It doesn't just talk; it **builds and optimizes**.
 
