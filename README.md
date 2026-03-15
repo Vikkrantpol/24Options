@@ -1,81 +1,107 @@
-# 24 Options — Strategy Studio
+# 24 Options — Quantum AI Strategy Studio
 
-**AI-powered options strategy platform for NIFTY / BANKNIFTY.** Build, analyze, and deploy 24 pre-built strategies with automatic position sizing, risk calculation, and strike optimization.
+**The professional-grade options trading engine for NIFTY / BANKNIFTY.** 
+24 Options combines a high-fidelity quantitative core with an embedded AI Options Engineer to automate position building, risk calculation, and strike optimization.
 
----
-
-## Why 24 Options?
-
-- **24 pre-built options strategies** — Bullish, bearish, neutral, and hedge. From single legs (Long Call, Long Put) to spreads (Iron Condor, Straddles, Butterflies) and backspreads. Pick a template, resolve to live strikes, deploy in one click.
-- **AI is at the core** — Used for **positions and recommendations**, not just chat. The AI scores all 24 strategies against live market data (Greeks, IV, expiry), suggests the best fit, and **calculates positions and risk automatically**. It can **improve probability of profit** by moving to the best strike prices (ATM/OTM selection, width tuning) so you get tradeable, deployable setups.
-- **Paper or live** — Paper trading with full P&L and Greeks, or connect Fyers for live data and execution. Risk limits and portfolio-level checks are built in.
+> [!CAUTION]
+> **DISCLAIMER: USE AT YOUR OWN RISK.**
+> Algorithmic trading involves substantial risk of loss. The AI recommendations and automated positions provided by this software are for educational and studio purposes only. Always validate setups in Paper Trading mode before live deployment.
 
 ---
 
-## Screenshots
+## The AI Options Engineer
+Unlike basic chatbots, the AI in **24 Options** is a senior quantitative engineer embedded in your terminal. It doesn't just talk; it **builds and optimizes**.
 
-Add your 5 screenshots in **`doc/screenshots/`** with these exact names; they will appear below.
+### AI Copilot Architecture
+The AI is not a chatbot — it is a **strategy scoring engine**:
 
-|  |  |
-|--|--|
-| **Strategy Studio / option chain** | **AI Copilot / recommendations** |
-| ![Strategy Studio](doc/screenshots/01-strategy-studio.png) | ![AI Copilot](doc/screenshots/02-ai-copilot.png) |
-| **24 strategies / payoff** | **Quant Engine / risk panel** |
-| ![Strategies & payoff](doc/screenshots/03-strategies-payoff.png) | ![Quant Engine](doc/screenshots/04-quant-engine.png) |
-| **Paper trading / positions** |  |
-| ![Paper trading](doc/screenshots/05-paper-trading.png) |  |
-
-**File names to use:** `01-strategy-studio.png`, `02-ai-copilot.png`, `03-strategies-payoff.png`, `04-quant-engine.png`, `05-paper-trading.png`
+1. **Chain Intake**: Live option chain fetched from Fyers → Greeks + IV computed for all strikes via native BSM engine.
+2. **Regime Classification**: Market regime classified (Trending/Sideways/High-IV) using ATM IV vs Historical Volatility ratios.
+3. **Strategy Scoring**: All 24 strategies scored against current market conditions for Probability of Profit (PoP).
+4. **Structured Reasoning**: LLM (Minimax M2.5) receives structured JSON context — not raw text snippets.
+5. **Leg Synthesis**: Returns ranked strategy list + recommended strikes + position sizing + risk summary.
+6. **Natural Language Interface**: "Build me a low-risk bearish trade for BNF expiry Thursday" → Parsed → Bear Put Spread → optimal OTM strikes auto-selected → Legs deployed.
 
 ---
 
-## Quick start
+## Quant Engine
+The pricing core implements the **Black-Scholes-Merton** model from scratch for high-fidelity calculations:
 
-**Requirements:** Python 3.10+, Node.js 18+
+- **Theoretical Price**: $C = S \cdot N(d_1) - K \cdot e^{-rT} \cdot N(d_2)$
+- **Implied Volatility**: Newton-Raphson solver converging to market price with high precision.
+- **Real-time Greeks Computed**:
+  - **Delta ($\partial V/\partial S$ )**: Your directional exposure.
+  - **Gamma ($\partial^2 V/\partial S^2$)**: Your convexity/acceleration risk.
+  - **Theta ($\partial V/\partial t$)**: Daily time decay in ₹.
+  - **Vega ($\partial V/\partial \sigma$)**: Sensitivity to a 1% move in implied volatility.
 
+Portfolio-level Greeks are aggregated across all open legs, enabling real-time net exposure monitoring and automated delta-neutral balancing.
+
+---
+
+## Risk Manager
+Configurable hard limits are enforced by the engine before any order hits the broker:
+
+- **Max Portfolio Delta**: Cap total directional exposure (e.g., $\pm 50$ delta).
+- **Max Theta Bleed**: Enforce a limit on daily time decay costs.
+- **Capital Risk %**: Max loss per trade as a percentage of total allocated capital.
+- **Vega Cap**: Restrict exposure during high-IV events to prevent volatility crush.
+- **Auto-Position Sizing**: Quantity is automatically calculated as: `Capital × Risk% ÷ Max Loss per contract`.
+
+---
+
+## 24 Pre-Built Canonical Strategies
+| Bullish | Bearish | Neutral | Volatility / Hedges |
+| :--- | :--- | :--- | :--- |
+| Bull Call Spread | Bear Put Spread | Iron Condor | Long Straddle |
+| Bull Put Spread | Bear Call Spread | Short Strangle | Long Strangle |
+| Call Ratio Backspread | Put Ratio Backspread | Iron Butterfly | Long Butterfly |
+| Bullish Jade Lizard | Bearish Jade Lizard | Delta Neutral Straddle | Black Swan Hedge |
+| *Single Legs (CE/PE/FUT)* | *Single Legs (CE/PE/FUT)* | *Calendar Spreads* | *Diagonal Spreads* |
+
+---
+
+## Why 24Options?
+| Feature | Sensibull / Opstra | 24Options |
+| :--- | :---: | :---: |
+| Self-Hosted | NO | YES |
+| AI strategy scoring | NO | YES |
+| Custom Greeks limits | NO | YES |
+| Open-source & hackable | NO | YES |
+| One-click Fyers deploy | NO | YES |
+
+---
+
+## Configuration
+Create a `.env` file based on `.env.example`:
+
+```env
+# Fyers API (for live data + execution)
+FYERS_CLIENT_ID=your_app_id
+FYERS_SECRET=your_secret
+FYERS_REDIRECT_URI=http://localhost:8000/auth/callback
+
+# AI Copilot
+OPENROUTER_API_KEY=your_key
+AI_MODEL=minimax/minimax-m2.5
+
+# Risk Settings
+MAX_CAPITAL=100000        # ₹ Capital allocated
+MAX_RISK_PER_TRADE=0.02   # 2% per trade
+PAPER_MODE=true           # Set to false for live execution
+```
+
+---
+
+## Quick Start
 ```bash
-# Clone and run
 git clone https://github.com/Vikkrantpol/24Options.git
 cd 24Options
 ./run.sh
 ```
-
-Then open **http://localhost:8000**. The launcher sets up the venv, installs backend/frontend deps, builds the UI, and starts the server. For live broker data, add Fyers credentials to `.env` (see `.env.example`).
-
----
-
-## Features
-
-- **24 canonical strategies** — Single legs, verticals, straddles/strangles, butterflies, iron condor, ratio and backspreads.
-- **AI-driven recommendations** — Strategy scoring and strike selection from live option chain; natural-language “build me a bear put spread” → deployable legs.
-- **Automatic risk & Greeks** — Per-strategy and portfolio Delta, Gamma, Theta, Vega; max loss/breakeven; risk manager with configurable limits.
-- **Paper trading** — Simulated OMS with P&L, positions, and journaling.
-- **Fyers integration** — OAuth, live option chain, multi-leg order placement (optional).
-
----
-
-## Tech stack
-
-- **Backend:** Python, FastAPI, SQLite (portfolio/quant DB), BSM pricing, Fyers API v3.
-- **Frontend:** React, TypeScript, Vite, Recharts.
-- **AI:** OpenRouter (e.g. Minimax M2.5) for copilot and strategy generation; signal/regime logic for “best strategy for this week”.
-
----
-
-## Project layout
-
-```
-24Options/
-├── backend/          # FastAPI app, pricing, AI engine, Fyers client, quant engine
-├── frontend/         # React SPA (Strategy Studio, Option Chain, AI Copilot, Quant panel)
-├── doc/              # Docs + screenshots (doc/screenshots/)
-├── data/             # Local DBs, tokens, logs (gitignored)
-├── run.sh            # One-command launcher
-└── .env.example      # Copy to .env and add Fyers / OpenRouter keys
-```
+Open **http://localhost:8000**. The launcher handles dependencies and environment setup automatically.
 
 ---
 
 ## License
-
-MIT (or your chosen license).
+MIT License. High-frequency trading carries risk; use responsibly.
