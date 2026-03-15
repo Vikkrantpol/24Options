@@ -1,5 +1,11 @@
 # 24 Options — Quantum AI Strategy Studio
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.10%2B-green.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688.svg)
+![React](https://img.shields.io/badge/React-18-blue.svg)
+![OpenRouter](https://img.shields.io/badge/AI-OpenRouter-orange.svg)
+
 **The professional-grade options trading engine for NIFTY / BANKNIFTY.** 
 24 Options combines a high-fidelity quantitative core with an embedded AI Options Engineer to automate position building, risk calculation, and strike optimization.
 
@@ -48,6 +54,13 @@ The pricing core implements the **Black-Scholes-Merton** model from scratch for 
   - **Vega ($\partial V/\partial \sigma$)**: Sensitivity to a 1% move in implied volatility.
 
 Portfolio-level Greeks are aggregated across all open legs, enabling real-time net exposure monitoring and automated delta-neutral balancing.
+
+### Under the Hood: BSM Implementation
+The engine is optimized for accuracy and speed, moving beyond simple intrinsic approximations:
+- **Numerical Precision**: Uses `scipy.stats.norm` for high-precision Cumulative Distribution Function (CDF) calculations.
+- **IV Solver**: Employs **Brent's Method** (`scipy.optimize.brentq`) for a robust root-finding solver that converges to the market-implied volatility with zero drift.
+- **Dividend Integration**: Inferred dividend yields (e.g., 1.2% for NIFTY50) are integrated into the $d_1$ and $d_2$ parameters for professional-grade pricing.
+- **Analytical Greeks**: Derived using exact closed-form solutions for Delta, Gamma, Theta, Vega, and Rho, rather than numerical finite-difference estimation.
 
 ---
 
