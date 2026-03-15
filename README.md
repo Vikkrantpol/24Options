@@ -12,13 +12,11 @@
 
 ## Visual Overview
 
-| Dashboard / Terminal | Strategy Studio |
+| Risk Lab (Main Dashboard) | Intelligent Strike Optimizer |
 | :---: | :---: |
-| ![Terminal Dashboard](doc/screenshots/01-terminal-dashboard.png) | ![Strategy Studio](doc/screenshots/02-strategy-studio.png) |
-| **AI Copilot** | **Risk Visualization** |
-| ![AI Copilot](doc/screenshots/03-ai-copilot.png) | ![Payoff & Greeks](doc/screenshots/04-payoff-greeks.png) |
-| **Risk Manager** | |
-| ![Quant Risk Manager](doc/screenshots/05-quant-risk-manager.png) | |
+| ![Risk Lab](doc/screenshots/01-risk-lab.png) | ![Strike Optimizer](doc/screenshots/02-strike-optimizer.png) |
+| **Real-time Greeks & Payoff** | **AI Analysis & Scoring** |
+| ![Payoff & Greeks](doc/screenshots/01-risk-lab.png) | ![Scoring Logic](doc/screenshots/02-strike-optimizer.png) |
 
 ---
 
