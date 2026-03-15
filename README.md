@@ -138,7 +138,7 @@ Open **http://localhost:8000**. The launcher handles dependencies and environmen
 ## Future Roadmap: The Autonomous Quant Team
 The vision for **24 Options** is to evolve from an AI Copilot into a fully autonomous **Mixture-of-Quant-Specialists (MoQS)** architecture:
 
-- **Autonomous Agent Swarm**: Deploying a team of flagship LLMs (Minimax, GPT-4o, Claude 3.5) where each agent handles a specific domain: Data Audit, Strategy Research, and Risk Guardrails.
+- **Autonomous Agent Swarm**: Deploying a team of flagship LLMs (Minimax, GPT, Claude Opus, Deepseek) where each agent handles a specific domain: Data Audit, Strategy Research, and Risk Guardrails.
 - **Human-in-the-Loop Execution**: The agent team will propose full strategy structures, BSM strikes, and position sizing. The human quant's role will shift to a **Single-Click Review & Approve** workflow.
 - **Self-Correcting Loops**: Implementation of automated post-trade analysis where the AI team reviews slippage and decay to optimize future entry logic.
 
