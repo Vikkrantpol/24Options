@@ -14,24 +14,18 @@
 
 ## Screenshots
 
-*(Add your 5 screenshots below. Replace the placeholder image paths with your files, e.g. `docs/screenshot1.png`.)*
+Add your 5 screenshots in **`doc/screenshots/`** with these exact names; they will appear below.
 
-| Screenshot | Description |
-|------------|-------------|
-| 1 | *(Add screenshot 1 — e.g. Strategy Studio / option chain)* |
-| 2 | *(Add screenshot 2 — e.g. AI Copilot / recommendations)* |
-| 3 | *(Add screenshot 3 — e.g. 24 strategies list / payoff)* |
-| 4 | *(Add screenshot 4 — e.g. Quant Engine / risk panel)* |
-| 5 | *(Add screenshot 5 — e.g. Paper trading / positions)* |
+|  |  |
+|--|--|
+| **Strategy Studio / option chain** | **AI Copilot / recommendations** |
+| ![Strategy Studio](doc/screenshots/01-strategy-studio.png) | ![AI Copilot](doc/screenshots/02-ai-copilot.png) |
+| **24 strategies / payoff** | **Quant Engine / risk panel** |
+| ![Strategies & payoff](doc/screenshots/03-strategies-payoff.png) | ![Quant Engine](doc/screenshots/04-quant-engine.png) |
+| **Paper trading / positions** |  |
+| ![Paper trading](doc/screenshots/05-paper-trading.png) |  |
 
-<!--
-Example after you add images:
-![Strategy Studio](docs/screenshot1.png)
-![AI Copilot](docs/screenshot2.png)
-![24 Strategies](docs/screenshot3.png)
-![Quant Engine](docs/screenshot4.png)
-![Paper Trading](docs/screenshot5.png)
--->
+**File names to use:** `01-strategy-studio.png`, `02-ai-copilot.png`, `03-strategies-payoff.png`, `04-quant-engine.png`, `05-paper-trading.png`
 
 ---
 
@@ -74,6 +68,7 @@ Then open **http://localhost:8000**. The launcher sets up the venv, installs bac
 24Options/
 ├── backend/          # FastAPI app, pricing, AI engine, Fyers client, quant engine
 ├── frontend/         # React SPA (Strategy Studio, Option Chain, AI Copilot, Quant panel)
+├── doc/              # Docs + screenshots (doc/screenshots/)
 ├── data/             # Local DBs, tokens, logs (gitignored)
 ├── run.sh            # One-command launcher
 └── .env.example      # Copy to .env and add Fyers / OpenRouter keys

@@ -1,0 +1,13 @@
+# Screenshots for README
+
+Drop your 5 screenshots here with these exact names:
+
+| File | Description |
+|------|-------------|
+| `01-strategy-studio.png` | Strategy Studio / option chain |
+| `02-ai-copilot.png` | AI Copilot / recommendations |
+| `03-strategies-payoff.png` | 24 strategies list / payoff chart |
+| `04-quant-engine.png` | Quant Engine / risk panel |
+| `05-paper-trading.png` | Paper trading / positions |
+
+They will appear automatically in the main [README](../../README.md).
