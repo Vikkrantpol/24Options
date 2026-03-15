@@ -41,7 +41,7 @@ Example after you add images:
 
 ```bash
 # Clone and run
-git clone https://github.com/YOUR_USERNAME/24Options.git
+git clone https://github.com/Vikkrantpol/24Options.git
 cd 24Options
 ./run.sh
 ```
