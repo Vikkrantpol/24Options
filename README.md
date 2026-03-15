@@ -15,8 +15,6 @@
 | Risk Lab (Main Dashboard) | Intelligent Strike Optimizer |
 | :---: | :---: |
 | ![Risk Lab](doc/screenshots/01-risk-lab.png) | ![Strike Optimizer](doc/screenshots/02-strike-optimizer.png) |
-| **Real-time Greeks & Payoff** | **AI Analysis & Scoring** |
-| ![Payoff & Greeks](doc/screenshots/01-risk-lab.png) | ![Scoring Logic](doc/screenshots/02-strike-optimizer.png) |
 
 ---
 
