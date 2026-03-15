@@ -12,15 +12,16 @@
 
 ## Visual Overview
 
-| Risk Lab (Main Dashboard) | Intelligent Strike Optimizer |
-| :---: | :---: |
-| ![Risk Lab](doc/screenshots/01-risk-lab.png) | ![Strike Optimizer](doc/screenshots/02-strike-optimizer.png) |
-| **AI Copilot Reasoning** | **Strategy Studio Builder** |
-| ![AI Copilot](doc/screenshots/03-ai-copilot.png) | ![Strategy Studio](doc/screenshots/04-strategy-studio.png) |
-| **Payoff & Greeks Analysis** | **Quant Engine Intelligence** |
-| ![Payoff & Greeks](doc/screenshots/05-payoff-greeks.png) | ![Quant Engine](doc/screenshots/06-quant-engine.png) |
-| **Quant Risk Manager** | |
-| ![Risk Manager](doc/screenshots/07-risk-manager.png) | |
+### Platform Gallery
+| View | Description |
+| :--- | :--- |
+| ![Strategy Catalog](doc/screenshots/01-strategy-catalog.png) | **AI Strategy Catalog**: Real-time signal readout with 24 pre-built templates and AI-ranked confidence scores. |
+| ![Strike Optimizer](doc/screenshots/02-strike-optimizer.png) | **Intelligent Optimizer**: Multi-objective root-finding to identify the best PoP/Risk-Reward strike combinations. |
+| ![Risk Lab](doc/screenshots/03-risk-lab.png) | **Quant Risk Lab**: Interactive Greek aggregation ($\Delta, \Gamma, \Theta, \nu$) and BSM-calculated profit/loss curves. |
+| ![Trade Desk](doc/screenshots/04-trade-desk.png) | **Order Ticket & Staging**: Professional multi-leg ticketing area with real-time net capital and margin requirements. |
+| ![Quant Intelligence](doc/screenshots/05-ai-quant-intelligence.png) | **Embedded AI Copilot**: Deep reasoning ("Thinking" mode) analyzing market regimes and providing trade justifications. |
+| ![AI Case Study 1](doc/screenshots/06-quant-portfolio-audit.png) | **Portfolio Audit**: AI-driven analysis of net portfolio delta and automated rebalancing recommendations. |
+| ![AI Case Study 2](doc/screenshots/07-market-regime-analysis.png) | **Regime Classification**: AI analysis of Historical vs. Implied Volatility to detect edge-case market environments. |
 
 ---
 
