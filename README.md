@@ -20,8 +20,8 @@
 | ![Risk Lab](doc/screenshots/03-risk-lab.png) | **Quant Risk Lab**: Interactive Greek aggregation ($\Delta, \Gamma, \Theta, \nu$) and BSM-calculated profit/loss curves. |
 | ![Trade Desk](doc/screenshots/04-trade-desk.png) | **Order Ticket & Staging**: Professional multi-leg ticketing area with real-time net capital and margin requirements. |
 | ![Quant Intelligence](doc/screenshots/05-ai-quant-intelligence.png) | **Embedded AI Copilot**: Deep reasoning ("Thinking" mode) analyzing market regimes and providing trade justifications. |
-| ![AI Case Study 1](doc/screenshots/06-quant-portfolio-audit.png) | **Portfolio Audit**: AI-driven analysis of net portfolio delta and automated rebalancing recommendations. |
-| ![AI Case Study 2](doc/screenshots/07-market-regime-analysis.png) | **Regime Classification**: AI analysis of Historical vs. Implied Volatility to detect edge-case market environments. |
+| ![AI Recommendation 1](doc/screenshots/06-quant-ai-recommendation-01.png) | **AI Recommendation (Bullish Case)**: LLM generated trade structure for a low-confidence trending market. |
+| ![AI Recommendation 2](doc/screenshots/07-quant-ai-recommendation-02.png) | **AI Recommendation (Bearish Case)**: Volatility-aware hedging strategy for a high-IV mean-reversion setup. |
 
 ---
 
