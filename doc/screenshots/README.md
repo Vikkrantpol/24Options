@@ -1,13 +1,15 @@
-# Screenshots for README
+# Screenshot Upload Guide
 
-Drop your 5 screenshots here with these exact names:
+Drop your 7 screenshots here with these exact names to populate the main project README.
 
 | File | Description |
-|------|-------------|
-| `01-strategy-studio.png` | Strategy Studio / option chain |
-| `02-ai-copilot.png` | AI Copilot / recommendations |
-| `03-strategies-payoff.png` | 24 strategies list / payoff chart |
-| `04-quant-engine.png` | Quant Engine / risk panel |
-| `05-paper-trading.png` | Paper trading / positions |
+| :--- | :--- |
+| `01-strategy-catalog.png` | AI Signal Catalog & 24-Strategy Sidebar |
+| `02-strike-optimizer.png` | Intelligent Strike Scoring & Selection |
+| `03-risk-lab.png` | Greeks Dashboard & Payoff Visualization |
+| `04-trade-desk.png` | Multi-leg Order Ticketing & Staging |
+| `05-ai-quant-intelligence.png` | AI "Thinking" Mode & Market Analysis |
+| `06-quant-ai-recommendation-01.png` | AI Case Study: Bullish/Trending Setup |
+| `07-quant-ai-recommendation-02.png` | AI Case Study: High-IV Hedging Setup |
 
-They will appear automatically in the main [README](../../README.md).
+These will appear automatically in the beautiful grid on the main [README](../../README.md).
