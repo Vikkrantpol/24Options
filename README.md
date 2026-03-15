@@ -8,11 +8,6 @@
 
 **The professional-grade options trading engine for NIFTY / BANKNIFTY.** 
 24 Options combines a high-fidelity quantitative core with an embedded AI Options Engineer to automate position building, risk calculation, and strike optimization.
-
-> [!CAUTION]
-> **DISCLAIMER: USE AT YOUR OWN RISK.**
-> Algorithmic trading involves substantial risk of loss. The AI recommendations and automated positions provided by this software are for educational and studio purposes only. Always validate setups in Paper Trading mode before live deployment.
-
 ---
 
 ## Visual Overview
@@ -78,11 +73,20 @@ Configurable hard limits are enforced by the engine before any order hits the br
 ## 24 Pre-Built Canonical Strategies
 | Bullish | Bearish | Neutral | Volatility / Hedges |
 | :--- | :--- | :--- | :--- |
-| Bull Call Spread | Bear Put Spread | Iron Condor | Long Straddle |
-| Bull Put Spread | Bear Call Spread | Short Strangle | Long Strangle |
-| Call Ratio Backspread | Put Ratio Backspread | Iron Butterfly | Long Butterfly |
-| Bullish Jade Lizard | Bearish Jade Lizard | Delta Neutral Straddle | Black Swan Hedge |
-| *Single Legs (CE/PE/FUT)* | *Single Legs (CE/PE/FUT)* | *Calendar Spreads* | *Diagonal Spreads* |
+| Long Call | Long Put | Iron Condor | Long Straddle |
+| Short Put (Cash-Secured) | Short Call (Naked) | Iron Butterfly | Long Strangle |
+| Bull Call Spread | Bear Put Spread | Short Straddle | Covered Call |
+| Bull Put Spread (Credit) | Bear Call Spread (Credit) | Short Strangle | Protective Put |
+| Ratio Call Spread | Ratio Put Spread | Long Call Butterfly | Collar |
+| Call Backspread | Put Backspread | Long Call Condor | Short Butterfly |
+
+---
+
+## Prerequisites
+- **Python**: 3.10+
+- **Node.js**: 18+
+- **Broker**: Fyers API v3 Account
+- **AI**: OpenRouter API Key
 
 ---
 
@@ -128,5 +132,15 @@ Open **http://localhost:8000**. The launcher handles dependencies and environmen
 
 ---
 
+## Author
+**Vikkrant Pol** — IIT Goa
+[LinkedIn](https://www.linkedin.com/in/vikkrantpol) | [GitHub](https://github.com/Vikkrantpol)
+
+---
+
 ## License
-MIT License. High-frequency trading carries risk; use responsibly.
+MIT License.
+
+> [!CAUTION]
+> **DISCLAIMER: USE AT YOUR OWN RISK.**
+> Algorithmic trading involves substantial risk of loss. The AI recommendations and automated positions provided by this software are for educational and studio purposes only. Always validate setups in Paper Trading mode before live deployment.
