@@ -15,6 +15,12 @@
 | Risk Lab (Main Dashboard) | Intelligent Strike Optimizer |
 | :---: | :---: |
 | ![Risk Lab](doc/screenshots/01-risk-lab.png) | ![Strike Optimizer](doc/screenshots/02-strike-optimizer.png) |
+| **AI Copilot Reasoning** | **Strategy Studio Builder** |
+| ![AI Copilot](doc/screenshots/03-ai-copilot.png) | ![Strategy Studio](doc/screenshots/04-strategy-studio.png) |
+| **Payoff & Greeks Analysis** | **Quant Engine Intelligence** |
+| ![Payoff & Greeks](doc/screenshots/05-payoff-greeks.png) | ![Quant Engine](doc/screenshots/06-quant-engine.png) |
+| **Quant Risk Manager** | |
+| ![Risk Manager](doc/screenshots/07-risk-manager.png) | |
 
 ---
 
