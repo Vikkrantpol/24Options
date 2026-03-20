@@ -1,5 +1,6 @@
 # 24 Options — Quantum AI Strategy Studio
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vikkrant_Pol-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/vikkrantpol)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.10%2B-green.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688.svg)
